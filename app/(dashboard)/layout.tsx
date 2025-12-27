@@ -1,26 +1,24 @@
 import Header from "@/app/components/Header"
 import Sidebar from "@/app/components/Sidebar"
 
-
-
 export default function DashboardLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-        <div className="flex flex-col h-screen overflow-hidden bg-gray-200">
-            {/* Header em cima */}
+        <div className="h-screen bg-gray-200">
             <Header />
 
-            {/* Conteúdo abaixo */}
-            <div className="flex flex-1">
-                <Sidebar />
-                <main className="flex-1 overflow-auto p-6">
-                    {children}
-                </main>
-            </div>
+            {/* INPUT precisa ser irmão DIRETO da Sidebar */}
+            <input type="checkbox" id="menu" className="peer hidden" />
+
+            <Sidebar />
+
+            {/* Conteúdo */}
+            <main className="ml-0 lg:ml-64 min-h-[calc(100vh-5rem)] overflow-auto p-6">
+                {children}
+            </main>
         </div>
     )
 }
-
