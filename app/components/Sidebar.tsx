@@ -3,15 +3,8 @@ import Image from "next/image"
 export default function Sidebar() {
     return (
         <aside
-            className="
-        fixed top-20 bottom-0 left-0 z-40
-        w-64 bg-white text-black
-        -translate-x-full
-        transition-transform duration-300 ease-in-out
-        peer-checked:translate-x-0
-        lg:translate-x-0
-        grid grid-rows-[1fr_auto]
-      "
+            className="fixed top-20 bottom-0 left-0 z-40 w-64 bg-white text-black -translate-x-full transition-transform 
+            duration-300 ease-in-out peer-checked:translate-x-0 lg:translate-x-0 grid grid-rows-[1fr_auto]"
         >
             {/* Navegação (rola se precisar) */}
             <nav className="pl-8 pt-6 space-y-6 overflow-y-auto">
