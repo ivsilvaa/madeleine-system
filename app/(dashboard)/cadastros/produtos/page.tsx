@@ -1,4 +1,4 @@
-import SemCadastros from "../sem_cadastros/page"
+import SemCadastros from "./_components/SemCadastros"
 
 export default function ProdutosPage() {
     const produtos = [] // depois vem do backend
